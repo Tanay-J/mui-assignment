@@ -1,4 +1,5 @@
 import { Button, Container, Divider, Grid, Typography } from "@mui/material";
+import Brightness1Icon from "@mui/icons-material/Brightness1";
 
 function OrderSummary() {
   return (
@@ -20,14 +21,22 @@ function OrderSummary() {
           </Grid>
         </Grid>
 
-        <Grid container color="gray" justifyContent="space-between">
-          <Grid item>
-            <Typography variant="subtitle2" fontWeight="medium" sx={{ my: 1 }}>
+        <Grid
+          container
+          color="gray"
+          justifyContent="space-between"
+          sx={{ my: 1 }}
+        >
+          <Grid item sx={{ display: "flex", alignItems: "center" }}>
+            <Typography variant="subtitle2" fontWeight="medium">
               VAT(14%)
             </Typography>
+            <Brightness1Icon
+              sx={{ mx: 1, color: "gainsboro", fontSize: "20px" }}
+            ></Brightness1Icon>
           </Grid>
           <Grid item>
-            <Typography variant="subtitle2" fontWeight="medium" sx={{ my: 1 }}>
+            <Typography variant="subtitle2" fontWeight="medium">
               ₹ 30.00
             </Typography>
           </Grid>
@@ -35,7 +44,12 @@ function OrderSummary() {
       </Container>
       <Divider />
       <Container sx={{ my: 2 }} disableGutters>
-        <Grid container color="gray" justifyContent="space-between">
+        <Grid
+          container
+          color="gray"
+          justifyContent="space-between"
+          sx={{ my: 2 }}
+        >
           <Grid item>
             <Typography variant="subtitle2" color="black">
               Total:
