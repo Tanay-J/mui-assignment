@@ -8,7 +8,7 @@ function OrderSummary() {
         Order Summary
       </Typography>
       <Container sx={{ my: 3 }} disableGutters>
-        <Grid container color="gray" justifyContent="space-between">
+        <Grid container color="#a9a9a9" justifyContent="space-between">
           <Grid item>
             <Typography variant="subtitle2" fontWeight="medium">
               Balance amount
@@ -23,7 +23,7 @@ function OrderSummary() {
 
         <Grid
           container
-          color="gray"
+          color="#a9a9a9"
           justifyContent="space-between"
           sx={{ my: 2 }}
         >
@@ -44,7 +44,7 @@ function OrderSummary() {
       </Container>
       <Divider />
       <Container sx={{ my: 3 }} disableGutters>
-        <Grid container color="gray" justifyContent="space-between">
+        <Grid container color="#a9a9a9" justifyContent="space-between">
           <Grid item>
             <Typography variant="subtitle2" color="black">
               Total:

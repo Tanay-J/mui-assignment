@@ -14,10 +14,14 @@ import "./styles.css";
 function BillingDetails() {
   return (
     <>
-      <Typography variant="h5" fontWeight="bold" sx={{ color: "gray", mb: 2 }}>
+      <Typography
+        variant="h5"
+        fontWeight="bold"
+        sx={{ color: "#a9a9a9", mb: 2 }}
+      >
         Billing Details
       </Typography>
-      <Grid container spacing={2.5} className="inputRounded">
+      <Grid container spacing={2.5} className="text-field">
         <Grid item xs={12}>
           <TextField
             variant="outlined"
@@ -30,7 +34,7 @@ function BillingDetails() {
         </Grid>
         <Grid item xs={12}>
           <FormControl size="small" fullWidth>
-            <InputLabel>Select Country</InputLabel>
+            <InputLabel sx={{ fontSize: "small" }}>Select Country</InputLabel>
             <Select label="Select Country">
               <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
               <MenuItem value={"Bhutan"}>Bhutan</MenuItem>
@@ -81,7 +85,7 @@ function BillingDetails() {
         </Grid>
         <Grid item xs={12}>
           <FormControl fullWidth size="small">
-            <InputLabel>State</InputLabel>
+            <InputLabel sx={{ fontSize: "small" }}>State</InputLabel>
             <Select label="State">
               <MenuItem value={"Karnataka"}>Karnataka</MenuItem>
               <MenuItem value={"Kerala"}>Kerala</MenuItem>
@@ -94,7 +98,7 @@ function BillingDetails() {
       <FormControlLabel
         control={<Checkbox />}
         label="Set as default payment method"
-        sx={{ my: 1, color: "gray" }}
+        sx={{ my: 2, color: "#a9a9a9" }}
       />
     </>
   );
