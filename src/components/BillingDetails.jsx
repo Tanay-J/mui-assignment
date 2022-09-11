@@ -5,11 +5,24 @@ import {
   Grid,
   InputLabel,
   MenuItem,
+  outlinedInputClasses,
   Select,
   TextField,
   Typography,
 } from "@mui/material";
+import styled from "styled-components";
 import "./styles.css";
+
+const StyledTextField = styled(TextField)({
+  [`& .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]: {
+    borderColor: "#f0f0f0",
+  },
+});
+const StyledFormControl = styled(FormControl)({
+  [`& .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]: {
+    borderColor: "#f0f0f0"
+  },
+});
 
 function BillingDetails() {
   return (
@@ -23,7 +36,7 @@ function BillingDetails() {
       </Typography>
       <Grid container spacing={2.5} className="text-field">
         <Grid item xs={12}>
-          <TextField
+          <StyledTextField
             variant="outlined"
             size="small"
             name="name"
@@ -33,7 +46,7 @@ function BillingDetails() {
           />
         </Grid>
         <Grid item xs={12}>
-          <FormControl size="small" fullWidth>
+          <StyledFormControl size="small" fullWidth>
             <InputLabel sx={{ fontSize: "small" }}>Select Country</InputLabel>
             <Select label="Select Country">
               <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
@@ -41,10 +54,10 @@ function BillingDetails() {
               <MenuItem value={"India"}>India</MenuItem>
               <MenuItem value={"Nepal"}>Nepal</MenuItem>
             </Select>
-          </FormControl>
+          </StyledFormControl>
         </Grid>
         <Grid item xs={12}>
-          <TextField
+          <StyledTextField
             variant="outlined"
             size="small"
             name="address1"
@@ -54,7 +67,7 @@ function BillingDetails() {
           />
         </Grid>
         <Grid item xs={12}>
-          <TextField
+          <StyledTextField
             variant="outlined"
             size="small"
             name="address2"
@@ -64,7 +77,7 @@ function BillingDetails() {
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <StyledTextField
             size="small"
             variant="outlined"
             name="city"
@@ -74,7 +87,7 @@ function BillingDetails() {
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <StyledTextField
             size="small"
             variant="outlined"
             name="zip"
@@ -84,7 +97,7 @@ function BillingDetails() {
           />
         </Grid>
         <Grid item xs={12}>
-          <FormControl fullWidth size="small">
+          <StyledFormControl fullWidth size="small">
             <InputLabel sx={{ fontSize: "small" }}>State</InputLabel>
             <Select label="State">
               <MenuItem value={"Karnataka"}>Karnataka</MenuItem>
@@ -92,7 +105,7 @@ function BillingDetails() {
               <MenuItem value={"Maharashtra"}>Maharashtra</MenuItem>
               <MenuItem value={"Meghalaya"}>Meghalaya</MenuItem>
             </Select>
-          </FormControl>
+          </StyledFormControl>
         </Grid>
       </Grid>
       <FormControlLabel
