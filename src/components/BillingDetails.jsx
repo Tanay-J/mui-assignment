@@ -29,7 +29,10 @@ function BillingDetails() {
           <FormControl size="small" fullWidth>
             <InputLabel>Select Country</InputLabel>
             <Select label="Select Country">
+              <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
+              <MenuItem value={"Bhutan"}>Bhutan</MenuItem>
               <MenuItem value={"India"}>India</MenuItem>
+              <MenuItem value={"Nepal"}>Nepal</MenuItem>
             </Select>
           </FormControl>
         </Grid>
@@ -73,7 +76,10 @@ function BillingDetails() {
           <FormControl fullWidth size="small">
             <InputLabel>State</InputLabel>
             <Select label="State">
+              <MenuItem value={"Karnataka"}>Karnataka</MenuItem>
+              <MenuItem value={"Kerala"}>Kerala</MenuItem>
               <MenuItem value={"Maharashtra"}>Maharashtra</MenuItem>
+              <MenuItem value={"Meghalaya"}>Meghalaya</MenuItem>
             </Select>
           </FormControl>
         </Grid>
