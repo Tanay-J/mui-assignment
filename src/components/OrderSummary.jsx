@@ -7,7 +7,7 @@ function OrderSummary() {
       <Typography variant="h5" fontWeight="bold">
         Order Summary
       </Typography>
-      <Container sx={{ my: 2 }} disableGutters>
+      <Container sx={{ my: 3 }} disableGutters>
         <Grid container color="gray" justifyContent="space-between">
           <Grid item>
             <Typography variant="subtitle2" fontWeight="medium">
@@ -25,7 +25,7 @@ function OrderSummary() {
           container
           color="gray"
           justifyContent="space-between"
-          sx={{ my: 1 }}
+          sx={{ my: 2 }}
         >
           <Grid item sx={{ display: "flex", alignItems: "center" }}>
             <Typography variant="subtitle2" fontWeight="medium">
@@ -43,13 +43,8 @@ function OrderSummary() {
         </Grid>
       </Container>
       <Divider />
-      <Container sx={{ my: 2 }} disableGutters>
-        <Grid
-          container
-          color="gray"
-          justifyContent="space-between"
-          sx={{ my: 2 }}
-        >
+      <Container sx={{ my: 3 }} disableGutters>
+        <Grid container color="gray" justifyContent="space-between">
           <Grid item>
             <Typography variant="subtitle2" color="black">
               Total:
@@ -57,7 +52,7 @@ function OrderSummary() {
             <Typography variant="caption">Including VAT</Typography>
           </Grid>
           <Grid item>
-            <Typography color="black" variant="h6" fontWeight="bold">
+            <Typography variant="h6" color="black" fontWeight="bold">
               ₹ 1330.00
             </Typography>
           </Grid>
@@ -68,7 +63,7 @@ function OrderSummary() {
         sx={{
           backgroundColor: "black",
           color: "white",
-          borderRadius: "10px",
+          borderRadius: "8px",
           textTransform: "none",
         }}
         fullWidth
