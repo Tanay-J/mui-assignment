@@ -24,6 +24,7 @@ function BillingDetails() {
             size="small"
             name="name"
             placeholder="Name"
+            aria-label="name"
             fullWidth
           />
         </Grid>
@@ -44,6 +45,7 @@ function BillingDetails() {
             size="small"
             name="address1"
             placeholder="Address"
+            aria-label="Address"
             fullWidth
           />
         </Grid>
@@ -53,6 +55,7 @@ function BillingDetails() {
             size="small"
             name="address2"
             placeholder="Address Line 2"
+            aria-label="Address Line 2"
             fullWidth
           />
         </Grid>
@@ -62,6 +65,7 @@ function BillingDetails() {
             variant="outlined"
             name="city"
             placeholder="City"
+            aria-label="city"
             fullWidth
           />
         </Grid>
@@ -71,6 +75,7 @@ function BillingDetails() {
             variant="outlined"
             name="zip"
             placeholder="ZIP"
+            aria-label="zip"
             fullWidth
           />
         </Grid>
