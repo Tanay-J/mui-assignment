@@ -1,5 +1,7 @@
 import {
+  Checkbox,
   FormControl,
+  FormControlLabel,
   Grid,
   InputLabel,
   MenuItem,
@@ -15,7 +17,7 @@ function BillingDetails() {
       <Typography variant="h5" fontWeight="bold" sx={{ color: "gray", mb: 2 }}>
         Billing Details
       </Typography>
-      <Grid container spacing={2} className="inputRounded">
+      <Grid container spacing={2.5} className="inputRounded">
         <Grid item xs={12}>
           <TextField
             variant="outlined"
@@ -84,6 +86,11 @@ function BillingDetails() {
           </FormControl>
         </Grid>
       </Grid>
+      <FormControlLabel
+        control={<Checkbox />}
+        label="Set as default payment method"
+        sx={{ my: 1, color: "gray" }}
+      />
     </>
   );
 }
