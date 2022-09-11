@@ -60,6 +60,7 @@ function OrderSummary() {
       </Container>
       <Button
         variant="contained"
+        size="large"
         sx={{
           backgroundColor: "black",
           color: "white",
