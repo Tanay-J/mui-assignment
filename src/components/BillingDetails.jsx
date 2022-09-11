@@ -11,6 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import styled from "styled-components";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import "./styles.css";
 
 const StyledTextField = styled(TextField)({
@@ -48,7 +49,7 @@ function BillingDetails() {
         <Grid item xs={12}>
           <StyledFormControl size="small" fullWidth>
             <InputLabel sx={{ fontSize: "small" }}>Select Country</InputLabel>
-            <Select label="Select Country">
+            <Select label="Select Country" IconComponent={ExpandMoreIcon}>
               <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
               <MenuItem value={"Bhutan"}>Bhutan</MenuItem>
               <MenuItem value={"India"}>India</MenuItem>
@@ -71,8 +72,8 @@ function BillingDetails() {
             variant="outlined"
             size="small"
             name="address2"
-            placeholder="Address Line 2"
-            aria-label="Address Line 2"
+            placeholder="Address line 2"
+            aria-label="address line 2"
             fullWidth
           />
         </Grid>
@@ -99,7 +100,7 @@ function BillingDetails() {
         <Grid item xs={12}>
           <StyledFormControl fullWidth size="small">
             <InputLabel sx={{ fontSize: "small" }}>State</InputLabel>
-            <Select label="State">
+            <Select label="State" IconComponent={ExpandMoreIcon}>
               <MenuItem value={"Karnataka"}>Karnataka</MenuItem>
               <MenuItem value={"Kerala"}>Kerala</MenuItem>
               <MenuItem value={"Maharashtra"}>Maharashtra</MenuItem>
