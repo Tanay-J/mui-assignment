@@ -1,82 +1,119 @@
 import {
+  Checkbox,
   FormControl,
+  FormControlLabel,
   Grid,
   InputLabel,
   MenuItem,
+  outlinedInputClasses,
   Select,
   TextField,
   Typography,
 } from "@mui/material";
+import styled from "styled-components";
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import "./styles.css";
+
+const StyledTextField = styled(TextField)({
+  [`& .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]: {
+    borderColor: "#f0f0f0",
+  },
+});
+const StyledFormControl = styled(FormControl)({
+  [`& .${outlinedInputClasses.root} .${outlinedInputClasses.notchedOutline}`]: {
+    borderColor: "#f0f0f0"
+  },
+});
 
 function BillingDetails() {
   return (
     <>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
+      <Typography
+        variant="h5"
+        fontWeight="bold"
+        sx={{ color: "#a9a9a9", mb: 2 }}
+      >
         Billing Details
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={2.5} className="text-field">
         <Grid item xs={12}>
-          <TextField
+          <StyledTextField
             variant="outlined"
             size="small"
             name="name"
             placeholder="Name"
+            aria-label="name"
             fullWidth
           />
         </Grid>
         <Grid item xs={12}>
-          <FormControl size="small" fullWidth>
-            <InputLabel>Select Country</InputLabel>
-            <Select label="Select Country">
+          <StyledFormControl size="small" fullWidth>
+            <InputLabel sx={{ fontSize: "small" }}>Select Country</InputLabel>
+            <Select label="Select Country" IconComponent={ExpandMoreIcon}>
+              <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
+              <MenuItem value={"Bhutan"}>Bhutan</MenuItem>
               <MenuItem value={"India"}>India</MenuItem>
+              <MenuItem value={"Nepal"}>Nepal</MenuItem>
             </Select>
-          </FormControl>
+          </StyledFormControl>
         </Grid>
         <Grid item xs={12}>
-          <TextField
+          <StyledTextField
             variant="outlined"
             size="small"
             name="address1"
             placeholder="Address"
+            aria-label="Address"
             fullWidth
           />
         </Grid>
         <Grid item xs={12}>
-          <TextField
+          <StyledTextField
             variant="outlined"
             size="small"
             name="address2"
-            placeholder="Address Line 2"
+            placeholder="Address line 2"
+            aria-label="address line 2"
             fullWidth
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <StyledTextField
             size="small"
             variant="outlined"
             name="city"
             placeholder="City"
+            aria-label="city"
             fullWidth
           />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <TextField
+          <StyledTextField
             size="small"
             variant="outlined"
             name="zip"
             placeholder="ZIP"
+            aria-label="zip"
             fullWidth
           />
         </Grid>
         <Grid item xs={12}>
-          <FormControl fullWidth size="small">
-            <InputLabel>State</InputLabel>
-            <Select label="State">
+          <StyledFormControl fullWidth size="small">
+            <InputLabel sx={{ fontSize: "small" }}>State</InputLabel>
+            <Select label="State" IconComponent={ExpandMoreIcon}>
+              <MenuItem value={"Karnataka"}>Karnataka</MenuItem>
+              <MenuItem value={"Kerala"}>Kerala</MenuItem>
               <MenuItem value={"Maharashtra"}>Maharashtra</MenuItem>
+              <MenuItem value={"Meghalaya"}>Meghalaya</MenuItem>
             </Select>
-          </FormControl>
+          </StyledFormControl>
         </Grid>
       </Grid>
+      <FormControlLabel
+        control={<Checkbox />}
+        label="Set as default payment method"
+        sx={{ my: 2, color: "#a9a9a9" }}
+      />
     </>
   );
 }

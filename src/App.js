@@ -9,7 +9,7 @@ function App() {
         container
         justifyContent="center"
         alignContent="center"
-        sx={{ my: "80px" }}
+        sx={{ my: "70px" }}
       >
         <Grid 
           item
