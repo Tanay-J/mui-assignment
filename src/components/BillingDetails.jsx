@@ -7,14 +7,15 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import "./styles.css";
 
 function BillingDetails() {
   return (
     <>
-      <Typography variant="h5" fontWeight="bold" sx={{ mb: 2 }}>
+      <Typography variant="h5" fontWeight="bold" sx={{ color: "gray", mb: 2 }}>
         Billing Details
       </Typography>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} className="inputRounded">
         <Grid item xs={12}>
           <TextField
             variant="outlined"
